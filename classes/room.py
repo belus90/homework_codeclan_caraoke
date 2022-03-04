@@ -4,6 +4,8 @@ class Room:
         self.guest_room = []
     
 
-    # def add_guest_to_the_room(self, new_guest):
-    #     self.guest_room.append(new_guest)
+    def add_guest(self, guest):
+        self.add_guest.append(guest)
+    
+
         
