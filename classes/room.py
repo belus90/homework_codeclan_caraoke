@@ -1,11 +1,16 @@
 class Room:
     def __init__(self, name):
         self.name = name
-        self.guest_room = []
-    
+        self.guests = []
+        self.songs =[]
 
-    def add_guest(self, guest):
-        self.add_guest.append(guest)
-    
+    def checking_in(self, guest):
+        self.guests.append(guest)
 
+    def check_out(self, guest):
+        self.guest_room.remove(quest)
+    
+    def peoplpe_in_the_room(self):
+        return len(self.quests)
+    
         
