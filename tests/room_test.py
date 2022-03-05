@@ -14,7 +14,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("90's room", self.room.name)
     
     def test_the_room_is_empty(self):
-        self.assertEqual(2, len(self.room.guests))
+        self.assertEqual(0, len(self.room.guests))
     
     def test_check_in_to_the_room(self):
         checking_guest = self.new_guest
@@ -23,12 +23,11 @@ class TestRoom(unittest.TestCase):
         actual = self.room.guests[0]
         self.assertEqual(expected,actual)
     
-    # def test_check_out_of_the_room(self):
-    #     checking_guest = self.new_guest
-    #     self.room.checking_out(checking_guest)
-    #     expected = "Vivien"
-    #     actual = self.room.guest_room[0]
-    #     self.assertEqual(expected,actual)
+    def test_check_out_of_the_room(self):
+        guest = Guest("Vivien Nemeth", 27,58)
+        self.room.checking_in(guest)
+        self.room.checking_out(guest)
+        self.assertEqual(0, self.room.guest_count())
     
 
     

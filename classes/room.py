@@ -7,10 +7,10 @@ class Room:
     def checking_in(self, guest):
         self.guests.append(guest)
 
-    def check_out(self, guest):
-        self.guest_room.remove(quest)
+    def checking_out(self, guest_to_check_out):
+        self.guests.remove(guest_to_check_out)
     
-    def peoplpe_in_the_room(self):
-        return len(self.quests)
+    def guest_count(self):
+        return len(self.guests)
     
         
